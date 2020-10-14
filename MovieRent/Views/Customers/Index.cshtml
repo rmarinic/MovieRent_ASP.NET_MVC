@@ -1,0 +1,20 @@
+﻿@model MovieRent.ViewModels.CustomerViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+
+<ul style="list-style-type:none">
+    @foreach (var customer in Model.customerList)
+    {
+        string destination = "Customers/Details/" + customer.id;
+
+        <li style="font-size:25px"><a href=@destination>@customer.name</a></li>
+    }
+</ul>
+
+
+
+
